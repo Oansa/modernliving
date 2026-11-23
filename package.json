@@ -1,0 +1,35 @@
+{
+  "name": "realestate-tour",
+  "version": "1.0.0",
+  "description": "Modern architecture and real estate landing site",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "optimize-frames": "node scripts/optimize-frames.js",
+    "postinstall": "node -e \"import('node:fs').then(fs => { if (fs.existsSync('node_modules/@rollup/wasm-node')) fs.cpSync('node_modules/@rollup/wasm-node', 'node_modules/rollup', { recursive: true, force: true }); })\""
+  },
+  "overrides": {
+    "rollup": "npm:@rollup/wasm-node"
+  },
+  "dependencies": {
+    "@gsap/react": "^2.1.2",
+    "gsap": "^3.12.7",
+    "lenis": "^1.1.20",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@rollup/wasm-node": "^4.28.1",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.3",
+    "sharp": "^0.33.5",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.7"
+  }
+}
